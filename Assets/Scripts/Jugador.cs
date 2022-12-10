@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Jugador : MonoBehaviour
 {
+    public static Jugador instance;
+
     [Header("Running")]
     public float speedRun;
 
@@ -19,12 +23,18 @@ public class Jugador : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Move();
+
+        inGround = Physics2D.OverlapCircle(CheckGround.position, 0.8f, MaskGround);
+        anim.SetBool("isGrounded", inGround);
+    }
+
+    void Move()
+    {
         rb2D.velocity = new Vector2(speedRun, rb2D.velocity.y);
 
         anim.SetFloat("VelX", rb2D.velocity.x);
 
-        inGround = Physics2D.OverlapCircle(CheckGround.position, 0.8f, MaskGround);
-        anim.SetBool("isGrounded", inGround);
     }
 
     // Update is called once per frame

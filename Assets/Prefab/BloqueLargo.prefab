@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3421267233170478318}
   - component: {fileID: 1921989754565934395}
   - component: {fileID: -5822293377528731364}
+  - component: {fileID: 4973837599869056870}
   m_Layer: 6
   m_Name: BloqueLargo
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1929394367
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 0eef05e46ab954378b24d1f181d8e242, type: 3}
   m_Color: {r: 0.2924528, g: 0.19101994, b: 0, a: 1}
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9952707, y: 0.6503539}
   m_EdgeRadius: 0
+--- !u!114 &4973837599869056870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5745159501736203967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570909419c8d74a888c2dedda0f0b6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 1
