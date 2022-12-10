@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1345256039020929886}
   - component: {fileID: 236964535480317809}
   - component: {fileID: -2834667115353445514}
+  - component: {fileID: 5109366104593188865}
   m_Layer: 6
   m_Name: BloqueCorto
   m_TagString: Untagged
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1929394367
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 0eef05e46ab954378b24d1f181d8e242, type: 3}
   m_Color: {r: 0.2924528, g: 0.19101994, b: 0, a: 1}
@@ -111,3 +112,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0047486, y: 0.707005}
   m_EdgeRadius: 0
+--- !u!114 &5109366104593188865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071050666853528175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570909419c8d74a888c2dedda0f0b6a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 1
