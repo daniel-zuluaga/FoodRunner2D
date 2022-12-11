@@ -55,6 +55,7 @@ public class Jugador : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Destroy(gameObject);
+            MenuManager.instance.GameOver();
         }
     }
 }

@@ -8,6 +8,8 @@ public class Score : MonoBehaviour
 {
     public int score;
     public TextMeshProUGUI textScore;
+
+
     public static Score instance;
 
     private void Awake()
@@ -27,12 +29,12 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void UpdateScore()
     {
-        textScore.text = "Score: " + score.ToString();
+        textScore.text = "Score\n" + score.ToString();
     }
 
     public void IncrementarPuntos(int scoreText)

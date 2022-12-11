@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ca878ebe2d3341da8fa9ffc3f4efbf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puntosGanados: 2
+  puntosGanados: 1
 --- !u!58 &7149782526610220641
 CircleCollider2D:
   m_ObjectHideFlags: 0
