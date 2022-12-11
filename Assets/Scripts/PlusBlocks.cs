@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlusBlocks : MonoBehaviour
 {
-    private bool bloqueColisionoJugador = false;
+    bool bloqueColisionoJugador = false;
     public int score;
 
     private void OnCollisionEnter2D(Collision2D other)
