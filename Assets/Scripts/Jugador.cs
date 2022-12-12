@@ -20,6 +20,7 @@ public class Jugador : MonoBehaviour
     [Header("Components")]
     public Rigidbody2D rb2D;
     public Animator anim;
+    public AudioSource audioS;
 
     private void FixedUpdate()
     {
@@ -45,6 +46,7 @@ public class Jugador : MonoBehaviour
             // We make it jump
             if (inGround)
             {
+                audioS.Play();
                 rb2D.velocity = new Vector2(rb2D.velocity.x, forceJump);
             }
         }
@@ -54,7 +56,7 @@ public class Jugador : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject, .5f);
             MenuManager.instance.GameOver();
         }
     }
