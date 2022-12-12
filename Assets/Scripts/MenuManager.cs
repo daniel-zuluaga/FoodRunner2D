@@ -10,11 +10,8 @@ public class MenuManager : MonoBehaviour
 
     [Header("Game Over")]
     public GameObject objGameOver;
-    public TextMeshProUGUI bestScoreText;
-    public TextMeshProUGUI textScore;
-    public Score score;
-    public int bestScore;
 
+    public AudioSource audioS;
     void Awake()
     {
         if(instance == null)
@@ -25,24 +22,14 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        bestScoreText.text = PlayerPrefs.GetInt("bestScore", 0).ToString();
+        objGameOver.SetActive(false);
     }
 
     public void GameOver()
     {
-        ChangeBestScore();
+        Camera.main.GetComponent<AudioSource>().Stop();
+        audioS.Play();
         objGameOver.SetActive(true);
-        textScore.text = "Score\n" + score.score.ToString();
-        bestScoreText.text = "Best Score\n" + bestScore.ToString();
-    }
-
-    public void ChangeBestScore()
-    {
-        if(score.score > PlayerPrefs.GetInt("bestScore", 0))
-        {
-            PlayerPrefs.SetInt("bestScore", score.score);
-            bestScoreText.text = score.score.ToString();
-        }
     }
 
     public void MenuGame()
@@ -52,11 +39,14 @@ public class MenuManager : MonoBehaviour
 
     public void PlayGame()
     {
+        Camera.main.GetComponent<AudioSource>().Stop();
         SceneManager.LoadScene("Game");
     }
 
     public void QuitGame()
     {
+        Camera.main.GetComponent<AudioSource>().Stop();
+        Debug.Log("Quit from game");
         Application.Quit();
     }
 }
