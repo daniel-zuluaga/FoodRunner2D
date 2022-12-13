@@ -17,6 +17,8 @@ public class Jugador : MonoBehaviour
     public bool inGround;
     public LayerMask MaskGround;
 
+    public GameObject deadPlayer;
+
     [Header("Components")]
     public Rigidbody2D rb2D;
     public Animator anim;
@@ -56,7 +58,10 @@ public class Jugador : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Destroy(gameObject, .5f);
+            gameObject.SetActive(false);
+            Instantiate(deadPlayer, transform.position, transform.rotation);
+            Destroy(deadPlayer);
+            Destroy(gameObject);
             MenuManager.instance.GameOver();
         }
     }

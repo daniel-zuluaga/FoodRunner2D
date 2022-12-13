@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour
 
     private void Start()
     {
-        objGameOver.SetActive(false);
+
     }
 
     public void GameOver()
@@ -40,13 +40,17 @@ public class MenuManager : MonoBehaviour
     public void PlayGame()
     {
         Camera.main.GetComponent<AudioSource>().Stop();
+        SceneManager.LoadScene("Skin");
+    }
+
+    public void PlayAgain()
+    {
         SceneManager.LoadScene("Game");
     }
 
     public void QuitGame()
     {
         Camera.main.GetComponent<AudioSource>().Stop();
-        Debug.Log("Quit from game");
         Application.Quit();
     }
 }
