@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8413169306255147994}
   - component: {fileID: 1866698485}
   - component: {fileID: 8263235661960643705}
+  - component: {fileID: 3650692148551317515}
   m_Layer: 0
   m_Name: NinjaFrog
   m_TagString: Player
@@ -207,6 +208,7 @@ MonoBehaviour:
   MaskGround:
     serializedVersion: 2
     m_Bits: 64
+  deadPlayer: {fileID: 2232692815174154421, guid: a4329e39325294cf790aaecd4e8da820, type: 3}
   rb2D: {fileID: -420025480444200858}
   anim: {fileID: 2685213754344375867}
   audioS: {fileID: 8263235661960643705}
@@ -222,7 +224,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 99e76f7ecfb1b4fb49f81d7ff93a01af, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -306,3 +308,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3650692148551317515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2685213754344375866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ab2ca9e6bfeb49cc83247ea11536e78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSelected: {fileID: 1866698485}
+  anim: {fileID: 2685213754344375867}
+  spriteR: {fileID: 2685213754344375864}
+  playersController:
+  - {fileID: 9100000, guid: 3cf78b54cdf8d4626bf283bfaf7ca935, type: 2}
+  - {fileID: 9100000, guid: 77448725e55824666b5dcbd68e838b59, type: 2}
+  - {fileID: 9100000, guid: 7dbd58387708c4c78ba11348cc50de4a, type: 2}
+  - {fileID: 9100000, guid: 1599f68f7edff42c6b3a358d4a8e8a67, type: 2}
+  playersRenderer:
+  - {fileID: -6367560908665664636, guid: cd947491a13509945aa1b644f9db3ef2, type: 3}
+  - {fileID: -6367560908665664636, guid: 40de9a8703e2e5a47882b0b86451c741, type: 3}
+  - {fileID: -6367560908665664636, guid: d348dff3819df794186a80cb95777629, type: 3}
+  - {fileID: -6367560908665664636, guid: 3750f45c844123341b9a777a96cb1eca, type: 3}
