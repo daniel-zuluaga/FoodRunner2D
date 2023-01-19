@@ -17,8 +17,6 @@ public class Jugador : MonoBehaviour
     public bool inGround;
     public LayerMask MaskGround;
 
-    public GameObject deadPlayer;
-
     [Header("Components")]
     public Rigidbody2D rb2D;
     public Animator anim;
@@ -30,6 +28,8 @@ public class Jugador : MonoBehaviour
 
         inGround = Physics2D.OverlapCircle(CheckGround.position, 0.8f, MaskGround);
         anim.SetBool("isGrounded", inGround);
+
+        speedRun += 0.01f * Time.deltaTime;
     }
 
     void Move()
@@ -58,9 +58,6 @@ public class Jugador : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            gameObject.SetActive(false);
-            Instantiate(deadPlayer, transform.position, transform.rotation);
-            Destroy(deadPlayer);
             Destroy(gameObject);
             MenuManager.instance.GameOver();
         }
