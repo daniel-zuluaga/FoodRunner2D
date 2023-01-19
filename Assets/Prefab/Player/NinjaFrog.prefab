@@ -157,7 +157,7 @@ Rigidbody2D:
   m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -201,14 +201,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63229173f6aa49a8a24c2e2f3320826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedRun: 5
+  speedRun: 3
   forceJump: 9
   CheckGround: {fileID: 2022175351}
   inGround: 0
   MaskGround:
     serializedVersion: 2
     m_Bits: 64
-  deadPlayer: {fileID: 2232692815174154421, guid: a4329e39325294cf790aaecd4e8da820, type: 3}
   rb2D: {fileID: -420025480444200858}
   anim: {fileID: 2685213754344375867}
   audioS: {fileID: 8263235661960643705}
